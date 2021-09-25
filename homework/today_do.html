@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 오늘의 투두</title>
+
+    <style>
+        .wrap {
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .todo-card {
+            border: 1px solid rgb(80, 80, 80);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        button {
+            width: 100px;
+        }
+
+        button:hover {
+            background-color: rgb(231, 179, 179);
+        }
+    </style>
+
+    <script>
+      // 투두 카드를 추가하는 함수
+      function addCard() {
+        const new_todo = document.createElement("div");
+        new_todo.className = "todo-card";
+
+        const title = document.createElement("h3");
+        title.textContent = document.getElementById("add-input").value;
+        const button = document.createElement("button");
+        button.textContent = "완료하기";
+        new_todo.appendChild(title);
+        new_todo.appendChild(button);
+
+
+        document.getElementsByClassName("todo-list")[0].appendChild(new_todo);
+      }
+
+    </script>
+
+</head>
+
+
+<body>
+    <h1 id="title">오늘 할 일 </h1>
+    <div class='wrap'>
+        <div class='todo-list'>
+            <div class='todo-card'>
+                <h3>독서하기</h3>
+                <button>완료하기</button>
+            </div>
+            <div class='todo-card'>
+                <h3>독서하기</h3>
+                <button>완료하기</button>
+            </div>
+        </div>
+        <div class='add'>
+            <input id="add-input" />
+            <button onclick="addCard()">추가하기</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+

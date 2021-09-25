@@ -1,0 +1,40 @@
+/* .App {
+    background-color: rgb(221, 221, 221);
+    height: 100vh;
+    /* vh는 화면을 기준으로 100%로 준다는 */    
+    /* width: 100vw;
+    display: flex;
+    flex-direction: column;
+} */ */
+
+/* .centerBox {
+    background-color: rgb(255,255,255);
+    max-width: 40vh;
+    height: 80vh;
+    width : 50vw;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 16px;
+}
+
+.centerBox > h1{
+    color:slateblue;
+    text-align: center;
+}
+
+.centerBox > .line {
+    margin: 20px 0px ;
+} */
+
+
+/* .box-item {
+    padding:15px;
+    margin: 10px;
+    background-color: aliceblue;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid rgb(229, 229, 243)
+
+} */
