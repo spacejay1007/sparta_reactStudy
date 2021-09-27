@@ -2,11 +2,13 @@ import React from "react";
 import img from "./emo.png";
 
 import { useHistory } from "react-router";
-
-
+import { useDispatch } from "react-redux";
+import { setName } from "./redux/modules/user";
 const Start = (props) => {
     console.log(props);
     const history = useHistory();
+    const dispatch=useDispatch();
+    const name_ref=React.useRef();
 
     return (
         <div style = {{
@@ -28,13 +30,16 @@ const Start = (props) => {
                 backgroundColor : "#c54e4e",
                 borderRadius : "10px",
             }}>{props.name}</span> 대해서 얼마나 알고있을까?</h1>
-            <input style = {{
+            <input ref={name_ref} 
+            style = {{
                 border : "1px solid #c54e4e",
                 borderRadius : "10px",
                 padding : "12px",                
             }}></input>
 
             <button onClick={() => {           
+                    console.log(name_ref.current.value);
+                    dispatch(setName(name_ref.current.value));
                     history.push("/quiz");
         
             }}

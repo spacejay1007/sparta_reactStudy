@@ -11,7 +11,8 @@ this.state = {};
 this.circle = React.createRef(null); 
 }
 
-hoverEvent = (e) => {
+hoverEvent = (e) => { 
+  // e 는 event 를 뜻함
   console.log(e.target);
   // console.log(this.circle.current);
   this.circle.current.style.background = "yellow";

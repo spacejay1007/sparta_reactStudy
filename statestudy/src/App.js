@@ -20,16 +20,10 @@ class App extends React.Component {
       this.setState({count: this.state.count -1});
     }else{
       window.alert('네모없음 추가해주세요')
-    }
-      
-
+    }      
   }
-
-
   render() {
-
     // console.log(nemo_count);
-
     return (
       <div className="App">
         <Nemo/>
@@ -39,6 +33,4 @@ class App extends React.Component {
     );
   }
 }
-
-
 export default App;
