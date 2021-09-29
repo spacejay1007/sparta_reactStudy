@@ -1,7 +1,10 @@
 import React from "react";
 import {useSelector} from "react-redux";
+import {useHistory} from "react-router-dom"
 
 const Score = (props) => {
+    const history=useHistory();
+
     console.log('1234');
     const quiz_list = useSelector(state => state.quiz.quiz_list);
     const user_answer_list = useSelector(state => state.quiz.user_answer_list);
@@ -24,7 +27,8 @@ const Score = (props) => {
             </h3>ss
             <p>우와 우린 참 친해요!</p>
 
-            <button>{props.name}에게 한마디</button>
+            <button onClick={()=> 
+            history.push("/message")}>{props.name}에게 한마디</button>
         </div>
     )
 

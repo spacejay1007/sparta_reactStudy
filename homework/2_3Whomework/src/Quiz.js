@@ -12,7 +12,7 @@ const Quiz = (props) => {
     //Redux 에서 퀴즈를 가져옴
     const quiz_list = useSelector(state => state.quiz.quiz_list);
     const user_answer_list = useSelector(state => state.quiz.user_answer_list);
-    // console.log(quiz_list);
+    console.log(quiz_list);
     //Quiz Make
     // const quiz_list = [{question : "이놈은 1살이다" , answer : false},
     //                     {question : "이놈은 남자다" , answer : true},

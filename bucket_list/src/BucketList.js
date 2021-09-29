@@ -8,7 +8,8 @@ import { useSelector } from "react-redux";
 const BucketList = (props) => {
     let history = useHistory();
     // console.log(props);
-    // const my_lists = props.list;
+    // const my_lists = props.list;  // app.js (app component 에서 받아오는 리스트)
+    // 아래는 redux hook 으로 받아오는 내용
     const my_lists = useSelector((state) => state.bucket.list);
 
     console.log(my_lists);

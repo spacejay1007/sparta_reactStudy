@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Route, Switch } from "react-router-dom";
 import NotFound from "./NotFound";
 import {useDispatch} from "react-redux";
-import {createBucket} from "./redux/modules/bucket";
+import {createBucket, loadBucketFB, addBucketFB } from "./redux/modules/bucket";
 import { db } from "./firebase";
 import { collection, doc, getDoc, getDocs ,addDoc, updateDoc, deleteDoc} from "@firebase/firestore";
 
@@ -23,8 +23,9 @@ function App() {
     const dispatch = useDispatch();
 
     //fire base
-    React.useEffect(async() => {
-        console.log(db);
+    React.useEffect(() => {
+        dispatch(loadBucketFB());
+        // console.log(db);
 
     // getDocs 구문        
         // const query = await getDocs(collection(db, "bucket"));
@@ -52,9 +53,10 @@ function App() {
         // setList([...list, text.current.value]);
         // dispatch(createBucket(text.current.value));
         // dispatch(createBucket({text:text.current.value, completed:false}));
-        dispatch(createBucket({text:text.current.value, completed:false}));
+        // dispatch(createBucket({text:text.current.value, completed:false}));
+        dispatch(addBucketFB({text:text.current.value, completed:false}));
     };
-
+    // console.log(addBucketList);
 
     console.log(list);
     return (

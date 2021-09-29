@@ -7,6 +7,8 @@ import './App.css';
 import Start from './start';
 import Quiz from './Quiz';
 import Score from './Score';
+import Message from './Message';
+import Ranking from './Ranking';
 
 import { Route } from 'react-router';
 
@@ -31,6 +33,15 @@ function App() {
       <Route path ="/score" exact>
         <Score />
       </Route>
+
+      <Route path ="/message" exact>
+        <Message/>
+      </Route>
+
+      <Route path ="/ranking" exact>
+        <Ranking />
+      </Route>
+
     </div>
   );
 }

@@ -1,11 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+//react
+import { useSelector } from "react-redux";
+import {Route, Switch} from "react-router-dom";
+//Load
+import DicList from './DicList';
+import AddDic from './AddDic';
+import {db} from './firebase'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <div>My Dictionary</div>
-    </div>
+    <>
+      <div className="App">        
+        <Switch>
+          <Route path="/" exact> 
+            <DicList />
+            </Route>
+          <Route path="/addDic" exact>
+            <AddDic />
+            </Route>
+        </Switch>
+      </div>
+    </>
   );
 }
 
