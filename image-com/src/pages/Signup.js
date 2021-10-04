@@ -1,0 +1,70 @@
+import React from "react";
+
+import { Grid, Input, Button, Text } from "../elements";
+
+import { useDispatch } from "react-redux";
+import {actionCreators as userActions} from "../redux/modules/user"
+
+const Signup = (props) => {
+    const dispatch = useDispatch();
+    
+    const[id, setId] = React.useState("");
+    const[pw, setPwd] = React.useState("");
+    const[user_name, setUserName] = React.useState("");
+
+    const signup = () => {
+        dispatch(userActions.signupFB());
+    }
+    return (
+    <React.Fragment>
+      <Grid>
+        <Grid>
+            <Text size="32px">회원가입</Text>
+        </Grid>
+
+        <Grid padding="16px 0px">
+            <Input
+            label="아이디"
+            placeholder="아이디를 입력해주세요"
+            _onChange={() => {
+                console.log("아이디를 입력했다!");
+            }}
+            />
+        </Grid>
+        <Grid padding="16px 0px">
+            <Input
+            label="닉네임"
+            placeholder="닉네임를 입력해주세요"
+            _onChange={(e) => {
+                console.log(e.target);
+            }}
+             // _onchage= (e) input에 적혀지는 것을 받는다 
+            />
+        </Grid>
+        <Grid padding="16px 0px">
+            <Input
+            label="패스워드"
+            placeholder="패스워드를 입력해주세요"
+            _onChange={() => {
+                console.log("패스워드를 입력했다!");
+            }}
+            />
+        </Grid>
+        <Grid padding="16px 0px">
+            <Input
+            label="비밀번호 확인"
+            placeholder="비밀번호 확인을 입력해주세요"
+            _onChange={() => {
+                console.log("비밀번호 확인 입력했다!");
+            }}
+            />
+        </Grid>
+        <Grid>
+            <Button text="회원가입하기" _onClick={signup}></Button>
+        </Grid>
+      </Grid>
+    </React.Fragment>
+  );
+};
+
+export default Signup;
