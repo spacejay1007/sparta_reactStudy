@@ -23,7 +23,7 @@ const Post = (props) => {
                 <Image shape="rectangle" src={props.src}/>
             </Grid>
             <Grid padding="16px">
-                <Text bold>댓글 {props.comment_cnt}개</Text>
+                <Text margin="0px" bold>댓글 {props.comment_cnt}개</Text>
             </Grid>
         </Grid>
       </React.Fragment>
@@ -39,7 +39,7 @@ Post.defaultProps = {
         user_name: "Jay",
         user_profile:"https://pds.joins.com/news/component/htmlphoto_mmdata/201705/31/ec7e79e9-7226-4b53-aa86-f87d7d9a9635.jpg",         
     },
-    imgae_url:"https://pds.joins.com/news/component/htmlphoto_mmdata/201705/31/ec7e79e9-7226-4b53-aa86-f87d7d9a9635.jpg",  
+    image_url:"https://pds.joins.com/news/component/htmlphoto_mmdata/201705/31/ec7e79e9-7226-4b53-aa86-f87d7d9a9635.jpg",  
     contents: "축구팬이시네요",
     comment_cnt : 10,
     insert_dt:"2021-02-27 10:00:00",

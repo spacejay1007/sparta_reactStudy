@@ -4,13 +4,17 @@ import { createBrowserHistory } from "history";
 import { connectRouter } from "connected-react-router";
 
 import User from "./modules/user";
+import Post from "./modules/post"
 
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
   user: User,
+  post: Post,
   router: connectRouter(history),
 });
+
+
 
 //action Creator 에서 사용 하는 middlewares Thunk를 사용 
 //withExtraArgument> thunk 내장함수 == 인수를 더 넘겨줄게 라는 
